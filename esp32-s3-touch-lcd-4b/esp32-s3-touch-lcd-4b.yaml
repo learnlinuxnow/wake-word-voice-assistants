@@ -1,7 +1,7 @@
 ---
 substitutions:
-  name: esp32-s3-box-3
-  friendly_name: ESP32 S3 Box 3
+  name: esp32-s3-touch-lcd-4b
+  friendly_name: ESP32-S3-Touch-LCD-4B
   loading_illustration_file: https://github.com/esphome/wake-word-voice-assistants/raw/main/casita/loading_320_240.png
   idle_illustration_file: https://github.com/esphome/wake-word-voice-assistants/raw/main/casita/idle_320_240.png
   listening_illustration_file: https://github.com/esphome/wake-word-voice-assistants/raw/main/casita/listening_320_240.png
