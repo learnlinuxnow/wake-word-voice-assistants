@@ -555,7 +555,7 @@ script:
     restore_mode: ALWAYS_OFF
     on_turn_off:
       # Turn off the repeat mode and disable the pause between playlist items
-     - lambda: |-
+     - lambda: 
               id(speaker_media_player)
                 ->make_call()
                 .set_command(media_player::MediaPlayerCommand::MEDIA_PLAYER_COMMAND_REPEAT_OFF)
@@ -567,7 +567,7 @@ script:
           announcement: true
     on_turn_on:
       # Turn on the repeat mode and pause for 1000 ms between playlist items/repeats
-      - lambda: |-
+      - lambda: 
             id(speaker_media_player)
               ->make_call()
               .set_command(media_player::MediaPlayerCommand::MEDIA_PLAYER_COMMAND_REPEAT_ONE)
