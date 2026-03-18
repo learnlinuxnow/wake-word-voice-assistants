@@ -53,7 +53,7 @@ esphome:
             - script.execute: draw_display
 
 esp32:
-  board: esp32-s3-touch-lcd-4b
+  board: ESP32-S3-WROOM-1-N16R8
   flash_size: 16MB
   cpu_frequency: 240MHz
   framework:
