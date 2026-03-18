@@ -97,7 +97,7 @@ button:
 binary_sensor:
   - platform: gpio
     pin:
-      number: GPIO0
+      number: GPIO0  #S3BOX GPIO0
       ignore_strapping_warning: true
       mode: INPUT_PULLUP
       inverted: true
@@ -114,32 +114,32 @@ binary_sensor:
         then:
           - button.press: factory_reset_btn
 
-output:
-  - platform: ledc
-    pin: GPIO47
-    id: backlight_output
+#output:
+#  - platform: ledc
+#    pin: GPIO47
+#    id: backlight_output
 
-light:
-  - platform: monochromatic
-    id: led
-    name: Screen
-    icon: "mdi:television"
-    entity_category: config
-    output: backlight_output
-    restore_mode: RESTORE_DEFAULT_ON
-    default_transition_length: 250ms
+#light:
+#  - platform: monochromatic
+#    id: led
+#    name: Screen
+#    icon: "mdi:television"
+#    entity_category: config
+#    output: backlight_output
+#    restore_mode: RESTORE_DEFAULT_ON
+#    default_transition_length: 250ms
 
 i2c:
-  scl: GPIO18
-  sda: GPIO8
+  scl: GPIO21  #S3BOX GPIO18
+  sda: GPIO47   #S3BOX GPIO8
 
 i2s_audio:
   - id: i2s_audio_bus
     i2s_lrclk_pin:
-      number: GPIO45
+      number: GPIO7 #S3BOX GPIO45
       ignore_strapping_warning: true
-    i2s_bclk_pin: GPIO17
-    i2s_mclk_pin: GPIO2
+    i2s_bclk_pin: GPIO16 #S3BOX GPIO17
+    i2s_mclk_pin: GPIO5 #S3BOX GPIO2
 
 audio_adc:
   - platform: es7210
@@ -157,14 +157,14 @@ microphone:
   - platform: i2s_audio
     id: box_mic
     sample_rate: 16000
-    i2s_din_pin: GPIO16
+    i2s_din_pin: GPIO6 #S3BOX GPIO16
     bits_per_sample: 16bit
     adc_type: external
 
 speaker:
   - platform: i2s_audio
     id: box_speaker
-    i2s_dout_pin: GPIO15
+    i2s_dout_pin: GPIO15 #S3BOX GPIO15
     dac_type: external
     sample_rate: 48000
     bits_per_sample: 16bit
@@ -528,7 +528,7 @@ switch:
   - platform: gpio
     name: Speaker Enable
     pin:
-      number: GPIO46
+      number:  EXIO3 #S3BOX GPIO46
       ignore_strapping_warning: true
     restore_mode: RESTORE_DEFAULT_ON
     entity_category: config
