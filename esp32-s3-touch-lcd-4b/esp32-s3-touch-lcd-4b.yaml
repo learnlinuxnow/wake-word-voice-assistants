@@ -137,7 +137,7 @@ i2s_audio:
   - id: i2s_audio_bus
     i2s_lrclk_pin:
       number: GPIO07 #S3BOX GPIO45
-      ignore_strapping_warning: true
+      ignore_strapping_warning: false
     i2s_bclk_pin: GPIO16 #S3BOX GPIO17
     i2s_mclk_pin: GPIO5 #S3BOX GPIO2
 
